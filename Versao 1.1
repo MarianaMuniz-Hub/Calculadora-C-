@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+
+// funcao de adicao;
+int adicao (int num1, int num2){
+    return num1 + num2;
+}
+
+// funcao de subtracao;
+int subtracao (int num1, int num2){
+    return num1 - num2;
+}
+
+// funcao de multiplicacao;
+int multiplicacao (int num1, int num2){
+    return num1 * num2;
+}
+
+// funcao de divisao;
+int divisao (int num1, int num2){
+    return num1 / num2;
+}
+
+int main() {
+    char opcao;
+    int num1, num2;
+    
+    for (int i = 1; i >= 0 ; i++){
+        
+        cout << "\n===== CALCULADORA COM MENU ====="<< endl;
+        cout << "1. Adição (+)"<< endl;
+        cout << "2. Subtração (-)"<< endl;
+        cout << "3. Multiplicação (*)"<< endl;
+        cout << "4. Divisão (/)"<< endl;
+        cout << "0. Sair"<< endl;
+        cout << "Escolha uma opção:" << endl;
+        cin >> opcao;
+        
+        //opcao adicao;
+        if (opcao == '1' || opcao == '+' ){
+            cout << "A opção escolhida foi adição!" << endl;  
+           cout << "Digite o primeiro numero:" << endl; 
+           cin >> num1;
+           cout << "Digite o segundo numero:" << endl; 
+           cin >> num2;
+           cout << "O resultado da adição é:" << adicao(num1, num2) << endl;
+        } 
+        
+        //opcao subtracao;
+        if (opcao == '2' || opcao == '-' ){
+           cout << "A opção escolhida foi subtração!" << endl;  
+           cout << "Digite o primeiro numero:" << endl; 
+           cin >> num1;
+           cout << "Digite o segundo numero:" << endl; 
+           cin >> num2;
+           cout << "O resultado da subtração é:" << subtracao(num1, num2) << endl;
+        } 
+        
+        //opcao multiplicacao;
+        if (opcao == '3' || opcao == '*'  ){
+           cout << "A opção escolhida foi multiplicação!" << endl;  
+           cout << "Digite o primeiro numero:" << endl; 
+           cin >> num1;
+           cout << "Digite o segundo numero:" << endl; 
+           cin >> num2;
+           cout << "O resultado da multiplicação é:" << multiplicacao(num1, num2) << endl;
+        } 
+        
+        //opcao divisao;
+        if (opcao == '4' || opcao == '/' ){
+           cout << "A opção escolhida foi divisão!" << endl;  
+           cout << "Digite o primeiro numero:" << endl; 
+           cin >> num1;
+           cout << "Digite o segundo numero:" << endl; 
+           cin >> num2;
+           cout << "O resultado da divisão é:" << divisao(num1, num2) << endl;
+        } 
+        
+        //opcao de finalizacao; 
+        if (opcao == 0){
+           cout << "A opção escolhida foi sair!Saindo!" << endl;
+           return 0;
+        }    
+    }
+    
+    return 0;
+}
